@@ -1,13 +1,13 @@
 {
   "name": "twiz-scrape",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Scrape urls and return smart media objects",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test"
   },
   "author": "José Carneiro",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "cheerio": "^0.22.0",
     "request": "^2.81.0"
