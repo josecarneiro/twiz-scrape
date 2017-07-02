@@ -1,20 +1,30 @@
 {
-  "name": "twiz-scrape",
-  "version": "0.2.0",
+  "name": "@twiz/scrape",
+  "version": "0.1.1",
   "description": "Scrape urls and return smart media objects",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test"
+    "test": "mocha ./test",
+    "test:dev": "nodemon mocha ./test",
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore"
   },
   "author": "José Carneiro",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twizco/scrape.git"
+  },
   "dependencies": {
-    "cheerio": "^0.22.0",
-    "request": "^2.81.0"
+    "cheerio": "^1.0.0-rc.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.0.2",
     "dotenv": "^4.0.0",
-    "mocha": "^3.2.0"
+    "eslint": "^4.1.1",
+    "@twiz/eslint-config-twiz": "^0.1.8",
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0"
   }
 }

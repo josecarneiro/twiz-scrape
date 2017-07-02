@@ -2,8 +2,7 @@
 
 /* DEPENDENCIES */
 // const expect = require('chai').expect;
-const config = require('./../../../config/test');
-const request = require('supertest')(`${config.base}/scrape`);
+const scrape = require('./setup');
 
 const util = require('util');
 let debug = false;
@@ -12,36 +11,22 @@ let log = object => { if (debug) console.log(util.inspect(object.data, { colors:
 /* TESTS */
 describe('Facebook', () => {
 
-  it('should parse facebook url.', (done) => {
-    request
-    .post('/parse')
-    .send({
-      data: {
-        url: 'http://facebook.com'
-      }
+  it('should parse facebook url.', done => {
+    scrape.scrape({ url: 'http://facebook.com' })
+    .then(data => {
+      // log(data);
+      done();
     })
-    .expect(200)
-    .end((error, res) => {
-      if (error) return done(error);
-      log(res.body);
-      return done();
-    });
+    .catch(done);
   });
 
-  it('should parse facebook profile.', (done) => {
-    request
-    .post('/parse')
-    .send({
-      data: {
-        url: 'http://facebook.com/josemcarneiro'
-      }
+  it('should parse facebook profile.', done => {
+    scrape.scrape({ url: 'http://facebook.com/josemcarneiro' })
+    .then(data => {
+      log(data);
+      done();
     })
-    .expect(200)
-    .end((error, res) => {
-      if (error) return done(error);
-      log(res.body);
-      return done();
-    });
+    .catch(done);
   });
 
 });

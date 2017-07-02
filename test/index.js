@@ -1,10 +1,9 @@
 'use strict';
 
 /* DEPENDENCIES */
-// require('dotenv').config({ silent: true, path: './config/test.env' });
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, './config/test.env') });
 
-/* DESCRIBE TEST WRAPPER */
 describe('Application Tests', () => {
-  /* REQUIRE TESTS */
   require('./scrape');
 });
