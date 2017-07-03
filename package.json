@@ -1,11 +1,11 @@
 {
   "name": "@twiz/scrape",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Scrape urls and return smart media objects",
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test",
-    "test:dev": "nodemon mocha ./test",
+    "test:dev": "nodemon --exec \"mocha ./test/index.js || true\"",
     "lint": "eslint ./ --cache --ignore-pattern .gitignore"
   },
   "author": "José Carneiro",

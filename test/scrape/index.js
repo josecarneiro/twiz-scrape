@@ -4,7 +4,7 @@ require('dotenv').config({ path: './../config/test.env' });
 
 let options = {
   testLink: true,
-  // testYoutube: true,
+  testYoutube: true,
   testFacebook: true
 };
 
