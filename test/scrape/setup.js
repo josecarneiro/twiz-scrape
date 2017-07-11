@@ -9,7 +9,13 @@ const services = [
     data: config.google,
     path: resolve(__dirname, './../../services/youtube')
   }
-  // 'medium'
+  // {
+  //   name: 'youtube',
+  //   data: config.google
+  // },
+  // 'medium',
+  // 'vimeo',
+  // 
 ];
 const options = Object.assign(config, { debug: true }, { services });
 
