@@ -1,7 +1,7 @@
 'use strict';
 
 /* DEPENDENCIES */
-const request = require('request-promise');
+// const request = require('request-promise');
 
 let base = 'https://www.googleapis.com/youtube/v3/videos?part=snippet&id=';
 let format = (id, key) => `${base}${id}&key=${key}`;
@@ -11,7 +11,7 @@ module.exports = function (link) {
   return new Promise((resolve, reject) => {
     let id = link.serviceData.id;
     if (!id) return resolve();
-    request(format(id, this.config.google.key))
+    this.request(format(id, this._config.key))
     .then(body => {
       try {
         body = JSON.parse(body);

@@ -1,5 +1,7 @@
+'use strict';
+
 module.exports = {
-  domains: [ 'youtube.com', 'www.youtube.com', 'youtu.be' ],
+  domains: [ 'medium.com' ],
   parser: require('./parser'),
   scraper: require('./scraper')
 };

@@ -1,7 +1,9 @@
 'use strict';
 
+// DEPENDENCIES
 const url = require('url');
 
+// PARSING FUNCTION FOR MEDIUM SERVICE
 module.exports = link => {
   let parsed = {};
   let path = url.parse(link.href).pathname.split('/');

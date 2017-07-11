@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@twiz/eslint-config-twiz@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@twiz/eslint-config-twiz/-/eslint-config-twiz-0.1.8.tgz#40749f59d4aec17cc7ced17832b60bbdc1ae4361"
+"@twiz/eslint-config-twiz@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@twiz/eslint-config-twiz/-/eslint-config-twiz-0.1.9.tgz#c8959d8c99b048734359cd9ba6a61b5020c27e41"
   dependencies:
     eslint-config-standard "^10.2.1"
     eslint-plugin-import "^2.3.0"

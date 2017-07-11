@@ -1,13 +1,12 @@
 'use strict';
 
 /* DEPENDENCIES */
-const request = require('request-promise');
 const cheerio = require('cheerio');
 
 /* EXPORTS PARSER FUNCTION */
-module.exports = link => {
+module.exports = function (link) {
   return new Promise((resolve, reject) => {
-    request({
+    this.request({
       url: link.url,
       jar: true,
       maxRedirects: 6
@@ -132,6 +131,21 @@ module.exports = link => {
             meta.app = meta.app || {};
             meta.app.android = meta.app.android || {};
             meta.app.android.url = attr.content;
+            break;
+        }
+      }
+
+      // LINKS
+      let links = $('link');
+      let list = [];
+      for (let i = 0; i < links.length; i++) {
+        list.push(links[i].attribs);
+      }
+
+      for (let link of list) {
+        switch (link.rel) {
+          case 'canonical':
+            meta.canonical = link.href;
             break;
         }
       }
