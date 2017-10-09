@@ -1,5 +1,6 @@
 node_modules
-*.sublime-project
 *.sublime-workspace
-.npm-debug.log
+npm-debug.log
 *.env
+yarn.lock
+package-lock.json
