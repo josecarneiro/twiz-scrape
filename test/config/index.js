@@ -2,10 +2,10 @@
 
 /* EXPORTS CONFIG OBJECT */
 module.exports = {
-  google: {
-    key: process.env.GOOGLE_API_KEY
+  'google': {
+    'key': process.env.GOOGLE_API_KEY
   },
-  vimeo: {
+  'vimeo': {
     // key: process.env.VIMEO_API_KEY
   }
 };

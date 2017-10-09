@@ -2,6 +2,20 @@
 	"folders":
 	[
 		{
+			"file_exclude_patterns":
+			[
+				".eslintrc.js",
+				".gitignore",
+				".npmignore",
+				".travis.yml",
+				"README.md",
+				"yarn.lock",
+				"test/mocha.opts"
+			],
+			"folder_exclude_patterns":
+			[
+				"node_modules"
+			],
 			"path": "."
 		}
 	]
