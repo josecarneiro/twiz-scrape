@@ -1,13 +1,13 @@
 'use strict';
 
 const Scrape = require('./../../.');
-const ScrapeYoutube = require('./../../lib/services/youtube');
+const ScrapeYoutube = require('./../../../scrape-services/scrape-service-youtube');
 const config = require('./../config');
 
 const options = Object.assign(config, { debug: true });
 
-module.exports = new Scrape(options, [
+module.exports = new Scrape([
   new ScrapeYoutube({
-    key: config.key
+    key: config.google.key
   })
-]);
+], options);

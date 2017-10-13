@@ -16,5 +16,5 @@ describe('Scrape', () => {
   if (options.testYoutube) require('./youtube');
   // if (options.testMedium) require('./medium');
   // if (options.testFacebook) require('./facebook');
-  if (options.testMultiple) require('./multiple-links');
+  // if (options.testMultip  le) require('./multiple-links');
 });

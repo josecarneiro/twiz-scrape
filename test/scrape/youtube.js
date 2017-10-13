@@ -1,12 +1,12 @@
 'use strict';
 
 /* DEPENDENCIES */
-const expect = require('chai').expect;
+const { expect } = require('chai');
 const scrape = require('./setup');
 
-const util = require('util');
+const { inspect } = require('util');
 let debug = true;
-let log = object => { if (debug) console.log(util.inspect(object, { colors: true, depth: 4 })); };
+let log = object => { if (debug) console.log(inspect(object, { colors: true, depth: 4 })); };
 
 /* TESTS */
 describe('Youtube', () => {
@@ -15,7 +15,7 @@ describe('Youtube', () => {
     let id = 'VbfpW0pbvaU';
     scrape.scrape({ url: `https://www.youtube.com/watch?v=${id}` })
     .then(data => {
-      // log(data);
+      log(data);
       // expect(data.service).to.equal('youtube');
       // expect(data.data.id).to.equal(id);
       // expect(data.meta.title).to.be.a('string');
